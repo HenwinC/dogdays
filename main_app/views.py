@@ -1,10 +1,10 @@
 from django.shortcuts import render
 # Add the following import
-from django.http import HttpResponse
+from .models import Dog
 
 # Define the home view
 def home(request):
-  return HttpResponse('<h1>Hello Puppy lovers</h1>')
+  return render(request, 'home.html')
 
 def mission(request):
   return render(request, 'mission.html')
@@ -12,3 +12,6 @@ def mission(request):
 def training(request):
   return render (request, 'training.html')
 
+def meetup(request):
+  dogs=Dog.objects.all
+  return render (request, 'meetup.html', {'dogs':dogs})

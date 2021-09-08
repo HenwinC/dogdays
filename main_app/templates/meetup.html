@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="card-container">
+  {% for dog in dogs %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+          {% comment %} img {%  %} {% endcomment %}
+        </div>
+        <h2 class="card-title">{{ dog.name }}</h2>
+          <h2>Is A {{ dog.age }} year old {{dog.sex}} {{ dog.breed }} </h2>
+          <h3>{{dog.temperment}}</h3>
+          <h3>{{dog.training}}</h3>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
