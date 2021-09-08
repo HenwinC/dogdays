@@ -1,6 +1,8 @@
 from django.shortcuts import render
 # Add the following import
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dog
+from django.urls import reverse
 
 # Define the home view
 def home(request):
@@ -13,5 +15,18 @@ def training(request):
   return render (request, 'training.html')
 
 def meetup(request):
-  dogs=Dog.objects.all
-  return render (request, 'meetup.html', {'dogs':dogs})
+  dogs = Dog.objects.all
+  return render (request, 'meetup.html', {'dogs': dogs})
+
+# class meetupcreate(CreateView):
+#   model = Dog
+#   fields = '__all__'
+#   success_url = '/meetup/'
+
+# class meetupDelete(DeleteView):
+#   model = Dog
+#   success_url = '/meetup/'
+  
+# class meetupUpdate(UpdateView):
+#   model = Dog
+#   fields = '__all__'
