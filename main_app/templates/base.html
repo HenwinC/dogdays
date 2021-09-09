@@ -22,9 +22,17 @@
     </div>
     <nav>
       <ul>
+        {% if user.is_authenticated %}
         <li><a href="{% url 'meetup' %}"> Meet-Up </a></li>
         <li><a href="{% url 'mission' %}">Mission Statement</a></li>
         <li><a href="{% url 'meetup_create' %}">Create A Post</a></li
+        <li><a href="{% url 'logout' %}">Log Out</a></li>
+        
+        {% else %}
+         <li><a href="{% url 'mission' %}">Mission</a></li>
+         <li><a href="{% url 'home' %}">Login</a></li>
+         <li><a href="{% url 'signup' %}">Sign Up</a></li>
+        {% endif %}
       </ul>
     </nav>
   </header>
