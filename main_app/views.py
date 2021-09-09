@@ -18,15 +18,18 @@ def meetup(request):
   dogs = Dog.objects.all
   return render (request, 'meetup.html', {'dogs': dogs})
 
-# class meetupcreate(CreateView):
-#   model = Dog
-#   fields = '__all__'
-#   success_url = '/meetup/'
+class meetupCreate(CreateView):
+  model = Dog
+  fields = '__all__'
+  template_name = 'dog_form.html'
+  success_url = '/meetup/dog_form'
 
-# class meetupDelete(DeleteView):
-#   model = Dog
-#   success_url = '/meetup/'
+class meetupDelete(DeleteView):
+  model = Dog
+  success_url = '/meetup/'
   
-# class meetupUpdate(UpdateView):
-#   model = Dog
-#   fields = '__all__'
+class meetupUpdate(UpdateView):
+  model = Dog
+  fields = '__all__'
+  success_url = '/meetup'
+  

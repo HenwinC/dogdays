@@ -14,10 +14,10 @@
           <h2>Is A {{ dog.age }} year old {{dog.sex}} {{ dog.breed }} </h2>
           <h3>{{dog.temperment}}</h3>
           <h3>{{dog.training}}</h3>
+    <a href="{% url 'meetupUpdate'  %}" class="btn warn">Edit</a>
+    <a href="{% url 'meetupDelete'  %}" class="btn danger">Delete</a
       </div>
     </div>
-    <a href="{% url 'cats_update' cat.id %}" class="btn warn">Edit</a>
-    <a href="{% url 'cats_delete' cat.id %}" class="btn danger">Delete</a
   {% endfor %}
 </section>
 
