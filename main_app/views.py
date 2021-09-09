@@ -18,6 +18,8 @@ def meetup(request):
 def meetup_detail(request, dog_id):
   dog=Dog.objects.get(id=dog_id)
   return render(request,'meetup_detail.html', {'dog':dog})
+
+  
 # class meetupCreate(CreateView):
 #   model = Dog
 #   fields = '__all__'
