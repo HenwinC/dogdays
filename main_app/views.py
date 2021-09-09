@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # Add the following import
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Dog
 
 
@@ -23,14 +23,13 @@ def meetup_detail(request, dog_id):
 class MeetUpCreate(CreateView):
   model = Dog
   fields = '__all__'
-
-
-# class meetupDelete(DeleteView):
-#   model = Dog
-#   success_url = '/meetup/'
+  success_url = '/meetup/'
+ 
+class meetupUpdate(UpdateView):
+  model = Dog
+  fields = '__all__'
+  success_url = '/meetup'
   
-# class meetupUpdate(UpdateView):
-#   model = Dog
-#   fields = '__all__'
-#   success_url = '/meetup'
-  
+class meetupDelete(DeleteView):
+  model = Dog
+  success_url = '/meetup/'
