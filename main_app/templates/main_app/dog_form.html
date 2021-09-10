@@ -9,21 +9,22 @@
 
 <div class="page-header">
   <h1>Add a Meet Up</h1>
+  
 </div>
 {% comment %} 
   Leaving the action empty makes the form post to the same url used to display it
 {% endcomment %}
-<form action="" method="post" class="form-container">
+<form action="" method="post" class="card text-dark bg-light mb-3" style="max-width: 30rem;">
   {% comment %} 
     Django requires the following for security purposes
   {% endcomment %}
   {% csrf_token %}
-  <table>
+ 
     {% comment %}
       Render the inputs inside of <tr>s & <td>s
     {% endcomment %}
     {{ form.as_table }}
-  </table>
+  
   <button type="submit" class="btn submit">Submit!</button>
 </form>
 
