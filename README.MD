@@ -4,7 +4,7 @@ https://dog-days-he.herokuapp.com/
 https://trello.com/b/9AA4a8y3/dog-days
 
 ## About Dog-Days
-I wanted to build a dog community to help with socializing dogs in a fun and safe way. 
+I wanted to build a dog community to help make socializing dogs fun and safe. 
 
 ## Instructions
 1. Log in 
