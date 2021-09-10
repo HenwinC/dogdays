@@ -30,3 +30,4 @@ Computer view
 ## Future Plans
 1. Messaging
 2. Adding videos
+3. Training Tips
