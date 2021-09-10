@@ -1,3 +1,7 @@
+html, body {
+  width: 100%;
+  height:100%;
+}
 
 body {
     background: linear-gradient(-45deg, #144955, #F14C38, #F4F1E0);
@@ -16,4 +20,3 @@ body {
         background-position: 0% 50%;
     }
 }
-

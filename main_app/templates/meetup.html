@@ -2,18 +2,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+<div> 
 <a href="{% url 'meetup_create' %}"><button type="button" class="btn btn-primary">Create A Post</button></a>
+</div>
+
   {% for dog in dogs %}
-    <a href="{% url 'meetup_detail' dog.id %}">
-    <div class="card text-dark bg-white mb-3" style="max-width: 30rem;">
+    <div class="card text-dark bg-transparent mb-3" style="max-width: 30rem; mx-auto">
         <h2>{{ dog.name }}</h2>
           <h2>Is A {{ dog.age }} year old {{dog.sex}} {{ dog.breed }} </h2>
           <br/>
           <h3>How do they act around other dogs and people: {{dog.temperment}}</h3>
            <br/>
           <h3>Training includes: {{dog.training}}</h3>
+    <a href="{% url 'meetup_detail' dog.id %}"><button class="btn btn-info">Details</button></a>
       </div>
-      </a>
     </div>
    
   {% endfor %}

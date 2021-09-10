@@ -12,9 +12,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class Home(LoginView):
   template_name = 'home.html'
 
-def mission(request):
-  return render(request, 'mission.html')
-
 @login_required
 def meetup(request):
   dogs = Dog.objects.all
